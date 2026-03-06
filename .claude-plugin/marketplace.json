@@ -3,16 +3,13 @@
   "description": "Marketplace for the Hexagonal .NET Guardian plugin — architecture boundary validation for .NET projects",
   "owner": {
     "name": "Victor Diaz",
-    "url": "https://github.com/ediabordin"
+    "url": "https://github.com/mastererickdiaz"
   },
   "plugins": [
     {
       "name": "hexagonal-dotnet-guardian",
       "description": "Validates and enforces Hexagonal Architecture boundaries in .NET projects",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/ediabordin/hexagonal-dotnet-guardian"
-      },
+      "source": ".",
       "version": "1.0.0",
       "keywords": [
         "dotnet",
