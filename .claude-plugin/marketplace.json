@@ -9,7 +9,7 @@
     {
       "name": "hexagonal-dotnet-guardian",
       "description": "Validates and enforces Hexagonal Architecture boundaries in .NET projects",
-      "source": ".",
+      "source": "./",
       "version": "1.0.0",
       "keywords": [
         "dotnet",
