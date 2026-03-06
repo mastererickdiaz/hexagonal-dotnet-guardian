@@ -1,0 +1,14 @@
+{
+  "hooks": [
+    {
+      "event": "PreToolUse",
+      "matcher": {
+        "tool_name": "Write|Edit"
+      },
+      "action": {
+        "type": "command",
+        "command": "bash -c 'FILE=\"$CLAUDE_TOOL_PARAM_FILE_PATH\"; if [ -z \"$FILE\" ]; then FILE=\"$CLAUDE_TOOL_PARAM_file_path\"; fi; if echo \"$FILE\" | grep -qiE \"\\.(cs|csproj)$\"; then LAYER=\"\"; if echo \"$FILE\" | grep -qi \"/Domain/\"; then LAYER=\"Domain\"; elif echo \"$FILE\" | grep -qi \"/Application/\"; then LAYER=\"Application\"; elif echo \"$FILE\" | grep -qi \"Infrastructure/\"; then LAYER=\"Infrastructure\"; elif echo \"$FILE\" | grep -qi \"API/\\|Controllers/\"; then LAYER=\"Presentation\"; fi; if [ -n \"$LAYER\" ]; then VIOLATIONS=\"\"; if [ \"$LAYER\" = \"Domain\" ]; then if echo \"$CLAUDE_TOOL_PARAM_CONTENT$CLAUDE_TOOL_PARAM_content\" | grep -qiE \"using.*(Infrastructure|MongoDB|Dapper|StackExchange|Confluent|Amazon|System\\.Net\\.Http)\"; then VIOLATIONS=\"Domain layer must not reference infrastructure packages or namespaces.\"; fi; fi; if [ \"$LAYER\" = \"Application\" ]; then if echo \"$CLAUDE_TOOL_PARAM_CONTENT$CLAUDE_TOOL_PARAM_content\" | grep -qiE \"using.*(Infrastructure|MongoDB|Dapper|StackExchange|Confluent|Amazon|System\\.Net\\.Http|Polly)\"; then VIOLATIONS=\"Application layer must not reference infrastructure packages. Use Domain port interfaces instead.\"; fi; fi; if [ -n \"$VIOLATIONS\" ]; then echo \"BOUNDARY VIOLATION in $LAYER layer: $VIOLATIONS\" >&2; exit 2; fi; fi; fi'"
+      }
+    }
+  ]
+}

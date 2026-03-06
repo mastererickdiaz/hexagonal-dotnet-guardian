@@ -1,0 +1,28 @@
+{
+  "name": "hexagonal-dotnet-guardian",
+  "version": "1.0.0",
+  "description": "Validates and enforces Hexagonal (Ports & Adapters) architecture boundaries in .NET projects. Prevents layer violations, detects wrong-layer dependencies, and guides correct code placement.",
+  "author": {
+    "name": "Victor Diaz",
+    "url": "https://github.com/ediabordin"
+  },
+  "repository": "https://github.com/ediabordin/hexagonal-dotnet-guardian",
+  "license": "MIT",
+  "keywords": [
+    "dotnet",
+    "hexagonal-architecture",
+    "clean-architecture",
+    "ports-and-adapters",
+    "architecture-validation",
+    "boundary-check",
+    "csharp"
+  ],
+  "commands": [
+    "./commands/check-boundaries.md"
+  ],
+  "agents": [
+    "./agents/architecture-validator.md"
+  ],
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json"
+}
