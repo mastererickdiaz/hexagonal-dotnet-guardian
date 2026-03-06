@@ -1,5 +1,4 @@
-{
-  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+{  
   "name": "hexagonal-dotnet-guardian",
   "version": "1.0.0",
   "description": "Validates and enforces Hexagonal (Ports & Adapters) architecture boundaries in .NET projects. Prevents layer violations, detects wrong-layer dependencies, and guides correct code placement.",

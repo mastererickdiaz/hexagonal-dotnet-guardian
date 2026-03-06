@@ -1,5 +1,6 @@
 {
-  "name": "hexagonal-dotnet-guardian-marketplace",
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "hexagonal-dotnet-guardian",
   "description": "Marketplace for the Hexagonal .NET Guardian plugin — architecture boundary validation for .NET projects",
   "owner": {
     "name": "Victor Diaz",
