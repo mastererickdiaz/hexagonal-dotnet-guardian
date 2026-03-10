@@ -19,7 +19,7 @@ Prevents layer violations, detects wrong-layer dependencies, and guides correct 
 
 ```bash
 # Add the marketplace (once)
-/plugin marketplace add ediabordin/hexagonal-dotnet-guardian
+/plugin marketplace add mastererickdiaz/hexagonal-dotnet-guardian
 
 # Install the plugin
 /plugin install hexagonal-dotnet-guardian
@@ -28,7 +28,7 @@ Prevents layer violations, detects wrong-layer dependencies, and guides correct 
 ### From Git directly
 
 ```bash
-claude plugin install --git https://github.com/ediabordin/hexagonal-dotnet-guardian
+claude plugin install --git https://github.com/mastererickdiaz/hexagonal-dotnet-guardian
 ```
 
 ## Usage
